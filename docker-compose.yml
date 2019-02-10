@@ -13,4 +13,4 @@ services:
   git:
     build: ./git
     volumes:
-      - ~/dev:/repos
+      - ${SOURCEGRAPH_LOCAL_REPO_ROOT}:/repos
