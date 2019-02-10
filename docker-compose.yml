@@ -1,0 +1,18 @@
+version: '3.2'
+
+services:
+  sourcegraph:
+    image: sourcegraph/server:3.0.1
+    volumes:
+      - ./.sourcegraph/config:/etc/sourcegraph
+      - ./.sourcegraph/data:/var/opt/sourcegraph
+    ports:
+      - "2633:2633"
+      - "7080:7080"
+
+  git:
+    build: ./git
+    volumes:
+      - ~/dev:/repos
+    # ports:
+    #   - "9418:9418"
