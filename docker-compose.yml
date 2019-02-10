@@ -14,5 +14,3 @@ services:
     build: ./git
     volumes:
       - ~/dev:/repos
-    # ports:
-    #   - "9418:9418"
